@@ -1,0 +1,51 @@
+<template>
+  <header>
+    <nav>
+      <ul class="no-bullets">
+        <li>
+          <a>Create quote</a>
+        </li>
+        <li>
+          <a>All quotes</a>
+        </li>
+        <li>
+          <a>About</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+</template>
+
+<script>
+export default {
+  name: "Header"
+}
+</script>
+
+<style scoped>
+header {
+  height: 0;
+  border-left: 26px solid transparent;
+  border-right: 26px solid transparent;
+  border-top: 40px solid var(--primary-accent);
+}
+
+header a {
+  color: var(--bg-color);
+}
+
+header a:hover {
+  color: var(--secondary-accent);
+  border-bottom: 2px solid var(--secondary-accent);
+}
+
+nav > ul {
+  display: flex;
+  justify-content: space-around;
+}
+
+nav > ul > li {
+  text-transform: uppercase;
+  margin-top: -40px;
+}
+</style>
