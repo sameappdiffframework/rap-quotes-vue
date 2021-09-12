@@ -6,10 +6,10 @@
           <a>Create quote</a>
         </li>
         <li>
-          <a>All quotes</a>
+          <router-link to="/">All quotes</router-link>
         </li>
         <li>
-          <a>About</a>
+          <router-link to="/about">About</router-link>
         </li>
       </ul>
     </nav>
