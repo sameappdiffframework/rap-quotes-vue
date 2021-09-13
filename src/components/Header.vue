@@ -3,7 +3,7 @@
     <nav>
       <ul class="no-bullets">
         <li>
-          <a>Create quote</a>
+          <button @click="$emit('createClicked')">Create quote</button>
         </li>
         <li>
           <router-link to="/">All quotes</router-link>
@@ -20,7 +20,8 @@
 import { defineComponent } from 'vue';
 
 export default defineComponent({
-  name: 'Header'
+  name: 'Header',
+  emits: ['createClicked']
 });
 </script>
 
