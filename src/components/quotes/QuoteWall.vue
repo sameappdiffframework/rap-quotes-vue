@@ -4,7 +4,7 @@
 </template>
 
 <script lang="ts">
-import Quote from '@/components/Quote.vue';
+import Quote from '@/components/quotes/Quote.vue';
 import { defineComponent, PropType } from 'vue';
 
 export interface QuoteModel {

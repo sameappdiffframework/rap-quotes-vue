@@ -14,9 +14,9 @@ import { defineComponent } from 'vue';
 import './App.css';
 import Header from './components/Header.vue';
 import Footer from './components/Footer.vue';
-import Modal from '@/components/Modal.vue';
-import { QuoteModel } from '@/components/QuoteWall.vue';
-import CreateQuoteForm from '@/components/CreateQuoteForm.vue';
+import Modal from '@/components/modal/Modal.vue';
+import { QuoteModel } from '@/components/quotes/QuoteWall.vue';
+import CreateQuoteForm from '@/components/forms/CreateQuoteForm.vue';
 
 export default defineComponent({
   name: 'App',

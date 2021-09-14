@@ -4,8 +4,8 @@ import { createApp } from 'vue';
 import { createRouter, createWebHistory, Router, RouteRecordRaw } from 'vue-router';
 import App from './App.vue';
 import About from '@/components/About.vue';
-import QuoteWall from '@/components/QuoteWall.vue';
-import type { QuoteModel } from './components/QuoteWall.vue';
+import QuoteWall from '@/components/quotes/QuoteWall.vue';
+import type { QuoteModel } from './components/quotes/QuoteWall.vue';
 
 const QUOTES: QuoteModel[] = [
     {
