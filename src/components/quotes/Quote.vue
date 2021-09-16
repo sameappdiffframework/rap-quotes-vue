@@ -16,8 +16,8 @@
 </template>
 
 <script lang="ts">
+import type { QuoteModel } from '@/services/quotes';
 import { defineComponent, PropType } from 'vue';
-import type { QuoteModel } from './QuoteWall.vue';
 
 export default defineComponent({
   name: 'Quote',

@@ -1,31 +1,23 @@
 <template>
   <h1>Rap Quotes</h1>
-  <Quote v-for="quote in quotes" :key="quote.id" :quote="quote"/>
+  <Quote v-for="quote in globalQuotes.quotes" :key="quote.id" :quote="quote"/>
 </template>
 
 <script lang="ts">
 import Quote from '@/components/quotes/Quote.vue';
-import { defineComponent, PropType } from 'vue';
-
-export interface QuoteModel {
-  id: string,
-  quote: string;
-  artist: {
-    name: string;
-    url?: string;
-  };
-  source: {
-    name: string;
-    url?: string;
-    image?: string;
-  };
-}
+import { QUOTE_STORE } from '@/services/quotes';
+import { defineComponent } from 'vue';
 
 export default defineComponent({
   name: 'QuoteWall',
   components: { Quote },
-  props: {
-    quotes: Array as PropType<QuoteModel[]>
+  mounted() {
+    QUOTE_STORE.getQuotes();
+  },
+  data() {
+    return {
+      globalQuotes: QUOTE_STORE.state
+    };
   }
 });
 </script>
